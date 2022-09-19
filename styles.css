@@ -1,0 +1,24 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+}
+
+.book-list li {
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.book-list p {
+  margin: 0;
+}
+
+.add-book > * {
+  margin-top: 1rem;
+}
