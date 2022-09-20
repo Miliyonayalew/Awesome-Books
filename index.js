@@ -12,7 +12,7 @@ const booksArray = JSON.parse(localStorage.getItem('books')) || [];
 const refreshList = () => {
   Store(booksArray);
   bookList.innerHTML = booksArray
-    .map((data, index) => `<li><p>${data.title}</p><p>${data.author}</p>
+    .map((data, index) => `<li><div class="book-info"><p>"${data.title}"</p>by<p>${data.author}</p></div>
       <button onclick=Book.removeBooks(${index}) class="removeButton">Remove</button></li>`).join('');
 };
 
@@ -36,6 +36,9 @@ refreshList();
 
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
+  if(title.value==='' && author.value===''){
+    return false;
+  }
   const book = new Book(title.value, author.value);
   booksArray.push(book);
   refreshList();
