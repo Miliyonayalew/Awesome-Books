@@ -1,22 +1,91 @@
+body {
+  font-family: sans-serif;
+}
+
 section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+section h1 {
+  font-size: 1.5rem;
 }
 
 .book-list {
   list-style: none;
   padding: 0;
+  border: 3px solid black;
 }
 
 .book-list li {
+  font-size: 1rem;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border-bottom: 1px solid black;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
+}
+
+.book-list li:nth-child(odd) {
+  background-color: #c9d1d9;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .book-list p {
   margin: 0;
+}
+
+.book-list button {
+  font-size: 1rem;
+  justify-self: end;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+}
+
+.line {
+  width: 20vw;
+  height: 3px;
+  background-color: black;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  border: 3px solid black;
+  width: 35vw;
+  height: 2rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-size: 1rem;
+  color: black;
+  opacity: 1;
+}
+
+#addButton {
+  font-size: 1rem;
+  align-self: flex-end;
+  width: fit-content;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
 }
 
 .add-book > * {
