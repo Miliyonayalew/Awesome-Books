@@ -36,7 +36,7 @@ refreshList();
 
 addButton.addEventListener('click', (e) => {
   e.preventDefault();
-  if(title.value==='' && author.value===''){
+  if (title.value === '' && author.value === '') {
     return false;
   }
   const book = new Book(title.value, author.value);
@@ -44,4 +44,5 @@ addButton.addEventListener('click', (e) => {
   refreshList();
   title.value = '';
   author.value = '';
+  return true;
 });
