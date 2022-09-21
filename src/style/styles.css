@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  height: 99vh;
+  height: 97vh;
 }
 
 nav {
@@ -24,8 +24,18 @@ nav ul li {
   cursor: pointer;
 }
 
- .active {
+.active {
   color: blue;
+}
+
+.book-list li {
+  font-size: 1rem;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 1rem;
 }
 
 nav ul li:nth-child(2) {
@@ -49,20 +59,14 @@ section h2 {
   font-size: 2.5rem;
 }
 
+section ul {
+  text-decoration: none;
+}
+
 .book-list {
   list-style: none;
   padding: 0;
   border: 3px solid black;
-}
-
-.book-list li {
-  font-size: 1rem;
-  width: 90vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding: 1rem;
 }
 
 .book-list li:nth-child(odd) {
@@ -120,32 +124,31 @@ section h2 {
 }
 
 #listPage {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 #addPage {
-  display: none;  
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
 #contactPage {
-  display: flex;  
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 2rem;
 }
 
 #contactPage p {
   font-size: 1.3rem;
 }
 
-#contactPage ul  {
+#contactPage ul {
   font-size: 1.3rem;
   line-height: 2rem;
   margin-top: 0;
