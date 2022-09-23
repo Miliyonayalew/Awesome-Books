@@ -2,6 +2,7 @@ const bookList = document.querySelector('.book-list');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const addButton = document.querySelector('#addButton');
+const message = document.querySelector('.message');
 
 function Store(books) {
   localStorage.setItem('books', JSON.stringify(books));
@@ -44,5 +45,9 @@ addButton.addEventListener('click', (e) => {
   refreshList();
   title.value = '';
   author.value = '';
+  message.style.display = 'block';
+  setTimeout(() => {
+    message.style.display = 'none';
+  }, 3000);
   return true;
 });

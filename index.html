@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="src/style/styles.css">
 </head>
 <body>
+  <video autoplay muted loop id="video">
+    <source src="./images/background.mp4" type="video/mp4">
+  </video>
   <nav>
-    <div>
-      <img id="logo" src="./images/logo.png" alt="logo">
-    </div>
+    <h1>Awesome Books</h1>
     <ul>
       <li class="list-book-page">List</li>
       <li class="add-book-page">Add New</li>
@@ -22,8 +23,10 @@
     <p id="date">hello here is the date</p>
     <div id="listPage">
     <h2>All awesome Books</h2>
-    <ul class="book-list"> 
-    </ul>
+    <div id="container">
+      <ul class="book-list"> 
+      </ul>
+    </div>
     </div>
     <div id="addPage">
     <h2>Add a new book</h2>
@@ -31,6 +34,7 @@
       <input class="input" id="title" type="text" placeholder="Title" required><br>
       <input class="input" id="author" type="text" placeholder="Author" required><br>
       <button id="addButton" type="submit">Add</button>
+      <p class=message>Your book has been succesfully added to the list.</p>
     </form>
     </div>
     <div id="contactPage">
@@ -41,11 +45,13 @@
         <li>Our phone: +541131200928</li>
         <li>Out address: Streetname 22, 83560 City, Country</li>
       </ul>
+      <img id="logo" src="./images/logo.png" alt="logo">
     </div>
   </section>
   <footer>
-    <p>Copyright</p>
+    <p>Copyright &copy; <span class="year"></span> Santiago Pons and Miliyon Ayalew</p>
   </footer>
-  <script src="index.js"></script>
+  <script src="src/js/index.js"></script>
+  <script src="src/js/navigation.js"></script>
 </body>
 </html>
